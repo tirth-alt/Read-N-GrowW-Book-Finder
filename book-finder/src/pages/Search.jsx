@@ -1,39 +1,3 @@
-// import { useState } from 'react'
-// import BookCard from '../components/BookCard'
-// import { useFavorites } from '../context/FavoritesContext'
-// import './Search.css'
-// import React from 'react'
-
-// const API_KEY = "AIzaSyDayBudKyjdGQGrccsIejPT0eUk_uRPedU";
-
-// export default function Search() {
-//   const [query, setQuery] = useState('')
-//   const [books, setBooks] = useState([])
-//   const [loading, setLoading] = useState(false)
-//   const { isFavorite } = useFavorites()
-
-//   const searchBooks = async () => {
-//     if (!query) return
-//     setLoading(true)
-//     try {
-//       const response = await fetch(
-//         `https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=20&key=${API_KEY}`
-//       )
-//       const data = await response.json()
-//       const booksWithFavorites = data.items?.map(book => ({
-//         ...book,
-//         isFavorite: isFavorite(book.id)
-//       })) || []
-//       setBooks(booksWithFavorites)
-//     } catch (error) {
-//       console.error('Error fetching books:', error)
-//     } finally {
-//       setLoading(false)
-//     }
-//   }
-
-  
-// }
 
 import { useState } from 'react';
 import BookCard from '../components/BookCard';
@@ -76,7 +40,7 @@ export default function Search() {
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search for books..."
+          placeholder="Search for books, authors..."
           onKeyDown={(e) => e.key === 'Enter' && searchBooks()} // Add Enter key support
         />
         <button onClick={searchBooks} disabled={loading}>

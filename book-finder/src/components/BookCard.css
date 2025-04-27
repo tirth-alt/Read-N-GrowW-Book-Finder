@@ -9,7 +9,20 @@
     justify-content: space-between; /* Pushes button down */
   
   }
+  .book-genres {
+    margin: 0.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
   
+  .genre-tag {
+    background-color: #e0e0e0;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    color: #555;
+  }
   .book-card:hover {
     transform: translateY(-5px);
   }

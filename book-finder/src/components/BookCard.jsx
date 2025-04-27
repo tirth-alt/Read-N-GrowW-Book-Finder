@@ -25,6 +25,13 @@ export default function BookCard({ book }) {
       )}
       <h3>{book.volumeInfo.title}</h3>
       <p>{book.volumeInfo.authors?.join(', ')}</p>
+      <div className="book-genres">
+        {book.volumeInfo.categories?.slice(0, 3).map((genre, index) => (
+          <span key={index} className="genre-tag">
+            {genre}
+          </span>
+        ))}
+      </div>
       <button 
         className={`favorite-btn ${favorite ? 'active' : ''}`}
         onClick={toggleFavorite}
