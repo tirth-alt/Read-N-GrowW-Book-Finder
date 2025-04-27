@@ -1,6 +1,6 @@
 # Book Finder App 📚
 
-[Deployed Project Link](read-n-grow-book-finder.vercel.app)
+[Deployed Project Link](read-n-groww.vercel.app)
 
 A React-based web application for discovering books using the Google Books API with genre recommendations, favorites tracking, and reading lists.
 
